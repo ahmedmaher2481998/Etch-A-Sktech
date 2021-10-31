@@ -10,26 +10,26 @@ body{
 .square-div{ 
     border: 1px solid rgb(26, 76, 170);
     background-color: white;
-    flex-basis: 40px;
-    height: 10px;
+    flex-basis: 100%;
+
 }
 
 .row{ 
 
     border: 1px solid rgb(145, 121, 167);
+    flex-basis: 100%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .container{ 
-    height: 960px;
-    width: 960px;
+    height: 800px;
+    width: 800px;
     margin-top: 50px;
     border: 1px solid rgb(33, 0, 109);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
 }
-.btn{ 
+/* .btn{ 
     height: 40px;
     width: 80px;
     border-radius: 20px;
@@ -38,4 +38,4 @@ body{
     position: relative;
     bottom: 250px;
     left: 250px;
-}
+} */
