@@ -53,9 +53,11 @@ document.querySelector(".btn").addEventListener('click',function(){
 let clear =document.querySelector(".clear");
 clear.addEventListener("click",function(e){
     let row = document.querySelectorAll(".square-div");
+    
     for(let i = 0 ;i < row.length; i++){ 
-        row[i].style.cssText="background-color: white;"
+        row[i].classList.remove("blacked")
     } 
+    
 
 })
 let rgb = document.querySelector(".rgb");
