@@ -19,7 +19,7 @@ function grid(x){
      let cells = document.querySelectorAll(".square-div");
      for(let i = 0; i < cells.length; i++){ 
          cells[i].addEventListener('mouseover',function(e){ 
-             e.target.style.cssText=`background-color: ${colorize()};`
+             e.target.classList.add("blacked")
     
          });
      }
@@ -30,14 +30,12 @@ function colorize(){
     let b = Math.floor(Math.random() * 256);
     let color= `rgb(${r},${g},${b})`
     return color;
-
-
 }
 grid(16);
 document.querySelector(".btn").addEventListener('click',function(){ 
     let row = document.querySelectorAll(".square-div");
     for(let i = 0 ;i < row.length; i++){ 
-        row[i].style.cssText="background-color: white;"
+        row[i].classList.add("blacked")
     }
     var dim;
     do{
@@ -53,7 +51,7 @@ document.querySelector(".btn").addEventListener('click',function(){
    
 });
 let clear =document.querySelector(".clear");
-clear.addEventListener("click",function(){
+clear.addEventListener("click",function(e){
     let row = document.querySelectorAll(".square-div");
     for(let i = 0 ;i < row.length; i++){ 
         row[i].style.cssText="background-color: white;"
@@ -61,7 +59,8 @@ clear.addEventListener("click",function(){
 
 })
 let rgb = document.querySelector(".rgb");
-rgb.addEventListener("click",function(){ 
+rgb.addEventListener("click",function(e){
+    console.log(e) ;
     
 })
 

@@ -7,14 +7,28 @@ body{
     box-sizing: border-box;
     flex-wrap: wrap;
 }
-.square-div{ 
+#btns{ 
+    position: relative;
+    margin: 20px 30%; 
+   
+}
+.style-btn{ 
+    color: white;
+    height: 30px;
+    width: 80px;
     border-radius: 20px;
+    margin: 0 20px;
+    background: rgb(42, 165, 97);
+}
+.square-div{ 
     border: .3px solid rgb(98, 148, 96);
     background-color: white;
     flex-basis: 100%;
 
 }
-
+.blacked{ 
+    background-color: black;
+}
 .row{ 
 
     border: 1px 0px solid rgb(145, 121, 167);
