@@ -19,7 +19,7 @@ function grid(x){
      let cells = document.querySelectorAll(".square-div");
      for(let i = 0; i < cells.length; i++){ 
          cells[i].addEventListener('mouseover',function(e){ 
-             e.target.style.cssText="background-color: black;"
+             e.target.style.cssText=`background-color: ${colorize()};`
     
          });
      }
@@ -28,6 +28,8 @@ function colorize(){
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
+    let color= `rgb(${r},${g},${b})`
+    return color;
 
 
 }
