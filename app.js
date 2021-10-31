@@ -4,7 +4,7 @@ function grid(x){
     for (let i = 0; i < x; i++){ 
         if(!Number.isInteger(x)){ 
             alert("Please Enter A number");
-            return "";
+            
         }
         let row = document.createElement('div');
         row.className=`row`;
@@ -16,13 +16,20 @@ function grid(x){
             row.appendChild(cell);
         }
      }
-     let cells = document.querySelectorAll(".row");
+     let cells = document.querySelectorAll(".square-div");
      for(let i = 0; i < cells.length; i++){ 
          cells[i].addEventListener('mouseover',function(e){ 
              e.target.style.cssText="background-color: black;"
     
          });
      }
+}
+function colorize(){ 
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+
 }
 grid(16);
 document.querySelector(".btn").addEventListener('click',function(){ 
@@ -32,7 +39,7 @@ document.querySelector(".btn").addEventListener('click',function(){
     }
     var dim;
     do{
-         dim = parseInt(prompt("Enter The size of the grid :"));
+         dim = parseInt(prompt("Enter The number of squares per side for the new grid:"));
     }while(dim > 100);
     container.innerHTML=''
     
@@ -50,5 +57,9 @@ clear.addEventListener("click",function(){
         row[i].style.cssText="background-color: white;"
     } 
 
+})
+let rgb = document.querySelector(".rgb");
+rgb.addEventListener("click",function(){ 
+    
 })
 
