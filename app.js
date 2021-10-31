@@ -60,12 +60,13 @@ clear.addEventListener("click",function(e){
     
 
 })
-let rgb = document.querySelector(".rgb");
-rgb.addEventListener("click",function(e){
-    let row = document.querySelectorAll(".square-div");
-    for(let i = 0; i < row.length; i++){ 
+
+// let rgb = document.querySelector(".rgb");
+// rgb.addEventListener("click",function(e){
+//     let row = document.querySelectorAll(".square-div");
+//     for(let i = 0; i < row.length; i++){ 
         
-    }
+//     }
     
-})
+// })
 
