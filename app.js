@@ -24,6 +24,7 @@ function grid(x){
          });
      }
 }
+// fun to generate random colors to fill the squares when hoved on 
 function colorize(){ 
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
