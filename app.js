@@ -16,13 +16,13 @@ function grid(x){
             row.appendChild(cell);
         }
      }
-     let cells = document.querySelectorAll(".square-div");
+     /*let cells = document.querySelectorAll(".square-div");
      for(let i = 0; i < cells.length; i++){ 
          cells[i].addEventListener('mouseover',function(e){ 
              e.target.classList.add("blacked")
     
          });
-     }
+     }*/
 }
 // fun to generate random colors to fill the squares when hoved on 
 function colorize(){ 
@@ -32,11 +32,21 @@ function colorize(){
     let color= `rgb(${r},${g},${b})`
     return color;
 }
-grid(16);
+function intilize(){ 
+    grid(16);
+    let cells = document.querySelectorAll(".square-div");
+     for(let i = 0; i < cells.length; i++){ 
+         cells[i].addEventListener('mouseover',function(e){ 
+             e.target.classList.add("blacked")
+    
+         });
+     }
+}
+intilize();
 document.querySelector(".btn").addEventListener('click',function(){ 
     let row = document.querySelectorAll(".square-div");
     for(let i = 0 ;i < row.length; i++){ 
-        row[i].classList.add("blacked")
+        row[i].classList.remove("blacked")
     }
     var dim;
     do{
@@ -46,22 +56,33 @@ document.querySelector(".btn").addEventListener('click',function(){
     
     if(Number.isInteger(dim)){ 
         grid(dim);
+
     
     }
     else grid(16);
-   
+    Array.from(document.querySelectorAll('.square-div')).map(sqr=>{ 
+        sqr.addEventListener('mouseover',function(e){ 
+            e.target.classList.add('blacked')
+        })
+    })
 });
 let clear =document.querySelector(".clear");
 clear.addEventListener("click",function(e){
     let row = document.querySelectorAll(".square-div");
-    
     for(let i = 0 ;i < row.length; i++){ 
         row[i].classList.remove("blacked")
-    } 
-    
-
+    }
+    Array.from(document.querySelectorAll('.square-div')).map(sqr=>{ 
+    e.target.style.backgroundColor = `white`  
 })
-
+})
+document.querySelector(".color").addEventListener('click',function(){ 
+    Array.from(document.querySelectorAll('.square-div')).map(sqr=>{ 
+        sqr.addEventListener('mouseover',function(e){ 
+            e.target.style.backgroundColor = `${ colorize()}` 
+        })
+    })
+})
 // let rgb = document.querySelector(".rgb");
 // rgb.addEventListener("click",function(e){
 //     let row = document.querySelectorAll(".square-div");
