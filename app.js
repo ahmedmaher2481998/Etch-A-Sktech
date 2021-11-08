@@ -72,8 +72,12 @@ clear.addEventListener("click",function(e){
     for(let i = 0 ;i < row.length; i++){ 
         row[i].classList.remove("blacked")
     }
-    Array.from(document.querySelectorAll('.square-div')).map(sqr=>{ 
-    e.target.style.backgroundColor = `white`  
+
+    Array.from(document.querySelectorAll('.square-div')).filter(div=> {
+        if(div.style.backgroundColor) return true ; 
+        else  return false ; 
+    }).map(sqr=>{ 
+        sqr.style.backgroundColor = null;
 })
 })
 document.querySelector(".color").addEventListener('click',function(){ 
