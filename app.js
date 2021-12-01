@@ -16,13 +16,7 @@ function grid(x){
             row.appendChild(cell);
         }
      }
-     /*let cells = document.querySelectorAll(".square-div");
-     for(let i = 0; i < cells.length; i++){ 
-         cells[i].addEventListener('mouseover',function(e){ 
-             e.target.classList.add("blacked")
-    
-         });
-     }*/
+     
 }
 // fun to generate random colors to fill the squares when hoved on 
 function colorize(){ 
@@ -87,12 +81,3 @@ document.querySelector(".color").addEventListener('click',function(){
         })
     })
 })
-// let rgb = document.querySelector(".rgb");
-// rgb.addEventListener("click",function(e){
-//     let row = document.querySelectorAll(".square-div");
-//     for(let i = 0; i < row.length; i++){ 
-        
-//     }
-    
-// })
-
